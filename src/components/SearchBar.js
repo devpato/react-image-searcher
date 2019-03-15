@@ -14,6 +14,7 @@ class SearchBar extends React.Component {
   onSearch = e => {
     e.preventDefault();
     this.props.onSubmit(this.state.term);
+    this.setState({ term: "Type a search term" });
   };
 
   render() {
