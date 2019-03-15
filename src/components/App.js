@@ -1,6 +1,7 @@
 import React from "react";
 import SearchBar from "./SearchBar";
 import unsplash from "../api/unsplash";
+import ImageList from "./ImageList";
 
 class App extends React.Component {
   state = {
@@ -26,6 +27,8 @@ class App extends React.Component {
         Term searched: {this.state.termSearched}
         <br />
         Found: {this.state.images.length}
+        <br />
+        <ImageList images={this.state.images} />
       </div>
     );
   }
